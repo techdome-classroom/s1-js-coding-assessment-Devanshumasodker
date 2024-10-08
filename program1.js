@@ -24,12 +24,12 @@ const visited = Array.from({ length: rows }, () => Array(cols).fill(false));
 let islandCount = 0;
 
 for (let i = 0; i < rows; i++) {
-    for (let j = 0; j < cols; j++) {
-        if (grid[i][j] === 'L' && !visited[i][j]) {
-            dfs(grid, i, j, visited);
-            islandCount++;
-        }
-    }
+  for (let j = 0; j < cols; j++) {
+      if (grid[i][j] === 'L' && !visited[i][j]) {
+          dfs(grid, i, j, visited);
+          islandCount++;
+      }
+  }
 }
 
 return islandCount;
