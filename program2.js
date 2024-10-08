@@ -17,11 +17,11 @@ const decodeTheRing = function (s, p) {
       }
 
       if (p[pIdx] === '*') {
-          const matchZeroChars = helper(sIdx, pIdx + 1);
-          const matchOneOrMoreChars = sIdx < s.length && helper(sIdx + 1, pIdx);
-          memo[key] = matchZeroChars || matchOneOrMoreChars;
-          return memo[key];
-      }
+        const matchZeroChars = helper(sIdx, pIdx + 1);
+        const matchOneOrMoreChars = sIdx < s.length && helper(sIdx + 1, pIdx);
+        memo[key] = matchZeroChars || matchOneOrMoreChars;
+        return memo[key];
+    }
 
       if (p[pIdx] === '?') {
         if (sIdx < s.length && helper(sIdx + 1, pIdx + 1)) {
