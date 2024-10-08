@@ -2,7 +2,6 @@ const getTotalIsles = function (grid) {
 
 
   const dfs = function(grid, i, j, visited) {
-    // Boundary check and if the cell is already visited or is water
     if (i < 0 || i >= grid.length || j < 0 || j >= grid[0].length || grid[i][j] === 'W' || visited[i][j]) {
         return;
     }
