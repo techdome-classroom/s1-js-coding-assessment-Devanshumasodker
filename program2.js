@@ -24,11 +24,11 @@ const decodeTheRing = function (s, p) {
       }
 
       if (p[pIdx] === '?') {
-          if (sIdx < s.length && helper(sIdx + 1, pIdx + 1)) {
-              memo[key] = true;
-              return true;
-          }
-      }
+        if (sIdx < s.length && helper(sIdx + 1, pIdx + 1)) {
+            memo[key] = true;
+            return true;
+        }
+    }
 
       if (sIdx < s.length && p[pIdx] === s[sIdx]) {
         memo[key] = helper(sIdx + 1, pIdx + 1);
