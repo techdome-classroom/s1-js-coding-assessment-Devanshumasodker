@@ -3,18 +3,18 @@ const decodeTheRing = function (s, p) {
   const memo = {};
 
   const helper = function (sIdx, pIdx) {
-      const key = `${sIdx}-${pIdx}`;
-      if (key in memo) {
-          return memo[key];
-      }
+    const key = `${sIdx}-${pIdx}`;
+    if (key in memo) {
+        return memo[key];
+    }
 
-      if (sIdx === s.length && pIdx === p.length) {
-          return true;
-      }
+    if (sIdx === s.length && pIdx === p.length) {
+        return true;
+    }
 
-      if (pIdx === p.length) {
-          return false;
-      }
+    if (pIdx === p.length) {
+        return false;
+    }
 
       if (p[pIdx] === '*') {
         const matchZeroChars = helper(sIdx, pIdx + 1);
