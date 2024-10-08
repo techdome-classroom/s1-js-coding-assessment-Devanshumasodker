@@ -49,7 +49,6 @@ const decodeTheRing = function (s, p) {
       return false;
   };
 
-  // Start recursive helper function from the beginning of both message and pattern
   return helper(0, 0);
 
   };
