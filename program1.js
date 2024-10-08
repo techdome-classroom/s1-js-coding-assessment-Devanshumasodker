@@ -26,7 +26,6 @@ const cols = grid[0].length;
 const visited = Array.from({ length: rows }, () => Array(cols).fill(false));
 let islandCount = 0;
 
-// Traverse the entire grid
 for (let i = 0; i < rows; i++) {
     for (let j = 0; j < cols; j++) {
         if (grid[i][j] === 'L' && !visited[i][j]) {
