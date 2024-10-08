@@ -8,10 +8,10 @@ const getTotalIsles = function (grid) {
     
     visited[i][j] = true;
     
-    dfs(grid, i + 1, j, visited);  // down
-    dfs(grid, i - 1, j, visited);  // up
-    dfs(grid, i, j + 1, visited);  // right
-    dfs(grid, i, j - 1, visited);  // left
+    dfs(grid, i + 1, j, visited);  
+    dfs(grid, i - 1, j, visited);  
+    dfs(grid, i, j + 1, visited);  
+    dfs(grid, i, j - 1, visited);  
 };
 
 if (!grid || grid.length === 0) {
