@@ -7,10 +7,8 @@ const getTotalIsles = function (grid) {
         return;
     }
     
-    // Mark the current cell as visited
     visited[i][j] = true;
     
-    // Explore all 4 possible directions (up, down, left, right)
     dfs(grid, i + 1, j, visited);  // down
     dfs(grid, i - 1, j, visited);  // up
     dfs(grid, i, j + 1, visited);  // right
