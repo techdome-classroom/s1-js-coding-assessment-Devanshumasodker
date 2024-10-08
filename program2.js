@@ -31,9 +31,9 @@ const decodeTheRing = function (s, p) {
       }
 
       if (sIdx < s.length && p[pIdx] === s[sIdx]) {
-          memo[key] = helper(sIdx + 1, pIdx + 1);
-          return memo[key];
-      }
+        memo[key] = helper(sIdx + 1, pIdx + 1);
+        return memo[key];
+    }
 
       memo[key] = false;
       return false;
